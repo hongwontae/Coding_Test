@@ -25,7 +25,6 @@ void calcaulate (const char * rny_string) {
     char * p = (char *) malloc (sizeof(char) * (total_length+1));
 
     // rny_string과 동적 할당된 index는 다릅니다.
-
     int j = 0;
 
     for (int i = 0; rny_string[i] != '\0'; ++i) {
