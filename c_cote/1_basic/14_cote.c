@@ -1,42 +1,42 @@
+// 배열에서 문자열 대소문자 변환하기
+
+// 문자열 배열 strArr가 주어집니다. 모든 원소가 알파벳으로만 이루어져 있을 때,
+//  배열에서 홀수번째 인덱스의 문자열은 모든 문자를 대문자로, 짝수번째 인덱스의 문자열은 모든 문자를 소문자로 바꿔서 반환하는 solution 함수를 완성해 주세요.
+
 #include <stdio.h>
-#include <ctype.h>
+#include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
-int main(void)
+char** solution(const char* strArr[], size_t strArr_len)
 {
-    char *pointer_string[] = {"ksK", "oSSSo", "SKsKs"};
+    // 문자열 포인터를 저장할 배열
+    char** answer = malloc(sizeof(char*) * strArr_len);
 
-    size_t length = sizeof(pointer_string) / sizeof(pointer_string[0]);
+    for (size_t i = 0; i < strArr_len; i++) {
 
-    printf("length : %zu\n", length);
+        // 문자열 하나를 저장할 공간
+        size_t length = strlen(strArr[i]);
+        
+        // 
+        answer[i] = malloc(length + 1);
 
-    char **pp = malloc(sizeof(char *) * length);
+        // 원본 문자열 복사
+        strcpy(answer[i], strArr[i]);
 
-    for (size_t i = 0; i < length; ++i) {
-
-        size_t one_length = strlen(pointer_string[i]);
-
-        pp[i] = malloc(one_length + 1);
-
-        strcpy(pp[i], pointer_string[i]);
-
-        for (size_t j = 0; j < one_length; ++j) {
+        // 짝수 인덱스 → 소문자
+        // 홀수 인덱스 → 대문자
+        for (size_t j = 0; j < length; j++) {
 
             if (i % 2 == 0) {
-                // 짝수 인덱스 → 소문자
-                pp[i][j] = tolower(pp[i][j]);
+                answer[i][j] = tolower(answer[i][j]);
             }
             else {
-                // 홀수 인덱스 → 대문자
-                pp[i][j] = toupper(pp[i][j]);
+                answer[i][j] = toupper(answer[i][j]);
             }
         }
     }
 
-    for (size_t i = 0; i < length; ++i) {
-        printf("%s\n", pp[i]);
-    }
-
-    return 0;
+    return answer;
 }
