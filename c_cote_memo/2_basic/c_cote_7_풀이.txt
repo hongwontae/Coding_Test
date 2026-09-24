@@ -1,0 +1,13 @@
+글자 이어 붙여 문자열 만들기
+
+문자열 my_string과 정수 배열 index_list가 매개변수로 주어집니다.
+my_string의 index_list의 원소들에 해당하는 인덱스의 글자들을 순서대로
+이어 붙인 문자열을 return 하는 solution 함수를 작성해 주세요.
+
+
+1. index_list_len 만큼 동적 할당의 길이로 둡니다.
+
+
+2. for문은 index_list_len 만큼 돌리고 index_list_len을 처음을 구해서 int에 담습니다.
+3. 그리고 그 값을 my_string의 인덱스로 하여 동적 공간에 넣습니다.
+
