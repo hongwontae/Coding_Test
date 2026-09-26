@@ -11,8 +11,6 @@
 
 int solution(int num_list[], size_t num_list_len) {
 
-    
-    
     char name_1 [10];
     char name_2 [10];
     

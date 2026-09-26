@@ -30,3 +30,14 @@ int solution(int a, int b) {
     return case_1 > case_2 ? case_1 : case_2;
     
 }
+
+
+int main (void) {
+
+
+    int value = solution(3, 19);
+
+    printf("value : %d\n", value);
+
+    return 0;   
+}

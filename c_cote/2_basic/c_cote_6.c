@@ -33,6 +33,8 @@ int main () {
 
     printf("n name : %s\n", p);
 
+    free(p);
+
 
     return 0;
 }

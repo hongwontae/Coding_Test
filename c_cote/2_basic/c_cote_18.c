@@ -11,7 +11,7 @@
 
 int solution(int num_list[], size_t num_list_len) {
     
-    unsigned int result = 0;
+     int result = 0;
     
     if (num_list_len >= 11) {
         for (int i = 0; i < num_list_len; ++i) {
@@ -25,4 +25,22 @@ int solution(int num_list[], size_t num_list_len) {
     }
     
     return result;
+}
+
+int main (void) {
+
+    int arr_list_1 [] = {1,2,3,4,5};
+    int arr_list_2 [] = {1,2,3,4,5,6,7,8,9,10,11,12};
+
+    size_t length_1 = sizeof(arr_list_1) / sizeof(arr_list_1[0]);
+    size_t length_2 = sizeof(arr_list_2) / sizeof(arr_list_2[0]);
+
+    int a = solution(arr_list_1, length_1);
+    int b = solution(arr_list_2, length_2);
+
+    printf("arr_list 1 value : %d\n", a);
+    printf("arr_list 2 value : %d\n", b);
+
+
+    return 0;
 }

@@ -36,5 +36,7 @@ int main (void) {
 
     printf("all name : %s\n", p);
 
+    free(p);
+
     return 0;
 }

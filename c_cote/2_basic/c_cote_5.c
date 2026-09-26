@@ -42,6 +42,8 @@ int main (void) {
     printf("p[%d] = %d\n", 1, p[2]);
     printf("p[%d] = %d\n", 1, p[3]);
 
+    free(p);
+
     return 0;
     
 

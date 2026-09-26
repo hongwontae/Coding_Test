@@ -9,13 +9,15 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-int* solution(int num_list[], size_t num_list_len, int n) {
+int* solution(int num_list[], size_t num_list_len, int n, int * total_len) {
    
     int total_length = 0;
     
     for (int i = 0; i < num_list_len; i+=n) {
         ++total_length;
     }
+
+    *total_len = total_length;
     
     int * p = (int *) malloc (sizeof(int) * total_length);
     
@@ -33,8 +35,21 @@ int* solution(int num_list[], size_t num_list_len, int n) {
 
 int main (void) {
 
-    
+    int arr_list [] = {10, 20, 30, 40, 50, 60, 70};
 
+    size_t length = sizeof(arr_list) / sizeof(arr_list[0]);
+
+    int gap = 2;
+
+    int total_len = 0;
+
+    int * p = solution(arr_list, length, gap, &total_len);
+
+    for (int i = 0; i < total_len; ++i) {
+        printf("p[%d] = %d\n", i, p[i]);
+    }
+
+    free(p);
 
     return 0;
 }

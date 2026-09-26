@@ -31,3 +31,16 @@ char* solution(const char* my_string, const char* alp) {
     return p;
     
 }
+
+
+int main (void) {
+
+    char * p = solution("proprogramers", "p");
+
+    printf("p -> %s\n", p);
+
+    free(p);
+
+
+    return 0;
+}
