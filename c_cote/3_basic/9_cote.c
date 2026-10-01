@@ -1,3 +1,5 @@
+// 문자열 잘라서 정렬하기
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
