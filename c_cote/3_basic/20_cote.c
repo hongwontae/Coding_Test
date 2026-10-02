@@ -18,10 +18,10 @@ int* solution(int start_num, int end_num) {
     while (true) {
         
         p[index] = num_num;
-        ++index;
         
         if (num_num == end_num) { break; }
         --num_num;
+        ++index;
         
     }
     

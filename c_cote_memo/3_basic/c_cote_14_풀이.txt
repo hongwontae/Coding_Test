@@ -5,3 +5,7 @@ numbers의 원소를 앞에서부터 하나씩 더하다가 그 합이 n보다 �
 원소들의 합을 return 하는 solution 함수를 작성해 주세요.
 
 
+1. int result = 0;를 정의합니다.
+
+
+2. for로 전체를 돌리고 더하는데 더하기 전에 if 문으로 n보다 큰지 검사하고 크다면 break;를 걸고 return 합니다.

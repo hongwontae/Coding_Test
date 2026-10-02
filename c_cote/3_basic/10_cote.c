@@ -5,7 +5,7 @@
 #include <string.h>
 
 
-char** solution_1(const char* my_string) {
+char ** solution_1(const char* my_string) {
     
     if (strstr(my_string, " ") == NULL) {
         char ** pp = (char **) malloc (sizeof(char *) * 1);
@@ -87,9 +87,7 @@ char ** solution_2 (const char* my_string, int * leng) {
 
 }
 
-char ** solution_3 (const char * my_string, int * leng) {
 
-}
 
 int main (void) {
 

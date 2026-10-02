@@ -2,3 +2,9 @@
 
 오늘 해야 할 일이 담긴 문자열 배열 todo_list와 각각의 일을 지금 마쳤는지를 나타내는 boolean 배열 finished가 매개변수로 주어질 때, 
 todo_list에서 아직 마치지 못한 일들을 순서대로 담은 문자열 배열을 return 하는 solution 함수를 작성해 주세요.
+
+
+1. finished에서 false라면 변수를 증가시키고 이 길이를 통해 이중 포인터 정의를 합니다.
+
+
+2. 그리고 todo_list 전체를 돌리고 finished[i]기 false라면 strlen, strcpy, 동적할당으로 처리하고 return
