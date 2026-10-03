@@ -1,0 +1,11 @@
+접두사인지 확인하기
+
+어떤 문자열에 대해서 접두사는 특정 인덱스까지의 문자열을 의미합니다.
+예를 들어, "banana"의 모든 접두사는 "b", "ba", "ban", "bana", "banan", "banana"입니다.
+문자열 my_string과 is_prefix가 주어질 때, is_prefix가 my_string의 접두사라면 1을, 아니면 0을 return 하는 solution 함수를 작성해 주세요.
+
+
+1. strncmp
+    => 문자열의 앞부분을 원하는 개수만큼 비교하는 함수입니다.
+    => int strncmp(const char *s1, const char *s2, size_t n);
+    => 앞부분부터 n까지 비교하는 함수입니다.
