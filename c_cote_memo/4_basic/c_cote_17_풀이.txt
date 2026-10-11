@@ -1,0 +1,11 @@
+문자열이 몇 번 등장하는지 세기
+
+문자열 myString과 pat이 주어집니다.
+myString에서 pat이 등장하는 횟수를 return 하는 solution 함수를 완성해 주세요.
+
+1. banana / ana -> ban ana nan ana.. 이렇게 한 글자씩 앞으로 가면서 비교해야 합니다.
+    => 총 루프 횟수는 my_string 길이 - pat 길이 + 1
+
+2. strncmp와 for i를 통해서 문자열을 앞으로 옮기면서 3개씩 비교하고 true라며 count +=1;
+
+
